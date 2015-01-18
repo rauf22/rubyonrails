@@ -1,0 +1,14 @@
+<h1><%= @item.name %></h1>
+
+	<ul>
+		<li>цена:<%=  @item.price %>руб.</li>
+		<li>описание:	
+	<% if @item.description = 'nil' %>
+		<b>Отсутствует.</b>
+	<% else %>
+	   <%= urls_to_links(urls_to_images(@item.description)) %>
+	<% end%></li>
+		<li>Вес: <%= @item.weight %>кг.</li>
+
+	</ul>
+	<p><%= link_to "Редактировать", edit_item_path %> </p>
