@@ -18336,3 +18336,2179 @@ Processing by ItemsController#index as HTML
   [1m[35mItem Load (1.5ms)[0m  SELECT "items".* FROM "items"
   Rendered items/index.html.erb within layouts/application (48.5ms)
 Completed 200 OK in 406ms (Views: 399.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-18 15:08:44 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 725ms (Views: 643.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-01-18 15:08:46 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-18 15:08:46 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-18 15:08:46 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-01-18 15:08:46 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-18 15:08:46 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-18 15:08:46 +0300
+
+
+Started GET "/assets/persons.css?body=1" for 127.0.0.1 at 2015-01-18 15:08:46 +0300
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-01-18 15:08:46 +0300
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-01-18 15:08:46 +0300
+
+
+Started GET "/assets/persons.js?body=1" for 127.0.0.1 at 2015-01-18 15:08:46 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-01-18 15:08:46 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-18 15:08:46 +0300
+
+
+Started GET "/items" for 127.0.0.1 at 2015-01-18 15:08:50 +0300
+Processing by ItemsController#index as HTML
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "items"
+  [1m[36mItem Load (1.4ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (95.9ms)
+Completed 200 OK in 503ms (Views: 430.4ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/items/16" for 127.0.0.1 at 2015-01-18 15:08:56 +0300
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mItem Load (0.8ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1  [["id", 16]]
+  Rendered items/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 357ms (Views: 321.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/items/16/edit" for 127.0.0.1 at 2015-01-18 15:09:00 +0300
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mItem Load (0.6ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1[0m  [["id", 16]]
+  Rendered items/_form.html.erb (38.7ms)
+  Rendered items/edit.html.erb within layouts/application (59.8ms)
+Completed 200 OK in 394ms (Views: 384.1ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/items/16" for 127.0.0.1 at 2015-01-18 15:09:15 +0300
+Processing by ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hkb7pIY4SRRSL1uu5vkBVLuoVQyY8jLPLMQ5XvbhkxO7UJqciq46KtT+nH7zr1cYV+sP4b+2Rh16/OunG2UVPg==", "item"=>{"price"=>"", "name"=>"Sofa", "description"=>"", "weight"=>""}, "commit"=>"Сохранить товар", "id"=>"16"}
+  [1m[35mItem Load (0.9ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1  [["id", 16]]
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (15.4ms)[0m  UPDATE "items" SET "description" = ?, "price" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", ""], ["price", nil], ["updated_at", "2015-01-18 12:09:15.283609"], ["id", 16]]
+  [1m[36m (161.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/items/16
+Completed 302 Found in 217ms (ActiveRecord: 178.7ms)
+
+
+Started GET "/items/16" for 127.0.0.1 at 2015-01-18 15:09:15 +0300
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mItem Load (1.5ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1  [["id", 16]]
+  Rendered items/show.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 392ms (Views: 380.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/persons.css?body=1" for 127.0.0.1 at 2015-01-18 15:09:16 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-01-18 15:09:16 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-18 15:09:16 +0300
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-01-18 15:09:16 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-18 15:09:16 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-18 15:09:16 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-18 15:09:16 +0300
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-01-18 15:09:16 +0300
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-01-18 15:09:16 +0300
+
+
+Started GET "/assets/persons.js?body=1" for 127.0.0.1 at 2015-01-18 15:09:16 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-18 15:09:16 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-01-18 15:09:16 +0300
+
+
+Started GET "/items/16/edit" for 127.0.0.1 at 2015-01-18 15:10:25 +0300
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mItem Load (0.6ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1[0m  [["id", 16]]
+  Rendered items/_form.html.erb (2.5ms)
+  Rendered items/edit.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 333ms (Views: 325.0ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/items/16" for 127.0.0.1 at 2015-01-18 15:10:31 +0300
+Processing by ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bjWwRoRQjm2PA3jsZBXMf+xWInvMJjK7yf3Pw2O3PV7LI9F+iMb9UwnSvzxxQ5ozABV4lutiRmmfxR06jjO7cw==", "item"=>{"price"=>"", "name"=>"", "description"=>"", "weight"=>""}, "commit"=>"Сохранить товар", "id"=>"16"}
+  [1m[35mItem Load (0.5ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1  [["id", 16]]
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  Rendered items/_form.html.erb (5.8ms)
+  Rendered items/edit.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 548ms (Views: 391.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-01-18 15:10:32 +0300
+
+
+Started GET "/assets/persons.css?body=1" for 127.0.0.1 at 2015-01-18 15:10:32 +0300
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-01-18 15:10:32 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-18 15:10:32 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-18 15:10:32 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-18 15:10:32 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-18 15:10:32 +0300
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-01-18 15:10:32 +0300
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-01-18 15:10:32 +0300
+
+
+Started GET "/assets/persons.js?body=1" for 127.0.0.1 at 2015-01-18 15:10:32 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-01-18 15:10:32 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-18 15:10:32 +0300
+
+
+Started GET "/items" for 127.0.0.1 at 2015-01-18 15:10:43 +0300
+Processing by ItemsController#index as HTML
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "items"[0m
+  [1m[35mItem Load (1.7ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application (41.1ms)
+Completed 200 OK in 405ms (Views: 398.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/persons.css?body=1" for 127.0.0.1 at 2015-01-18 15:10:43 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-18 15:10:43 +0300
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-01-18 15:10:43 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-18 15:10:44 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-01-18 15:10:44 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-18 15:10:44 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-18 15:10:44 +0300
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-01-18 15:10:44 +0300
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-01-18 15:10:44 +0300
+
+
+Started GET "/assets/persons.js?body=1" for 127.0.0.1 at 2015-01-18 15:10:44 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-18 15:10:44 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-01-18 15:10:44 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-18 15:10:47 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 319ms (Views: 316.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2015-01-18 15:10:49 +0300
+Processing by ItemsController#index as HTML
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "items"[0m
+  [1m[35mItem Load (1.6ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application (46.8ms)
+Completed 200 OK in 407ms (Views: 400.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2015-01-18 15:10:59 +0300
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (2.5ms)
+  Rendered items/new.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 342ms (Views: 337.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2015-01-18 15:11:05 +0300
+Processing by ItemsController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "items"[0m
+  [1m[35mItem Load (1.6ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application (34.9ms)
+Completed 200 OK in 354ms (Views: 347.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/items/18" for 127.0.0.1 at 2015-01-18 15:11:14 +0300
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mItem Load (0.6ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1[0m  [["id", 18]]
+  Rendered items/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 356ms (Views: 348.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/items/18/edit" for 127.0.0.1 at 2015-01-18 15:11:17 +0300
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[35mItem Load (0.6ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1  [["id", 18]]
+  Rendered items/_form.html.erb (3.6ms)
+  Rendered items/edit.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 332ms (Views: 324.2ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/items/18" for 127.0.0.1 at 2015-01-18 15:11:25 +0300
+Processing by ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7PBaeXCP43nOm597MQbmr5bCs1xK82P34C28Dmd29wNJ5jtBfBmQR0hKWKskULDjeoHpsW23FyW2FW73ivJxLg==", "item"=>{"price"=>"10.0", "name"=>"", "description"=>"живая", "weight"=>"0.01"}, "commit"=>"Сохранить товар", "id"=>"18"}
+  [1m[36mItem Load (0.6ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1[0m  [["id", 18]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  Rendered items/_form.html.erb (3.4ms)
+  Rendered items/edit.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 370ms (Views: 340.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-01-18 15:11:25 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-01-18 15:11:25 +0300
+
+
+Started GET "/assets/persons.css?body=1" for 127.0.0.1 at 2015-01-18 15:11:25 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-18 15:11:25 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-18 15:11:25 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-18 15:11:25 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-18 15:11:25 +0300
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-01-18 15:11:25 +0300
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-01-18 15:11:25 +0300
+
+
+Started GET "/assets/persons.js?body=1" for 127.0.0.1 at 2015-01-18 15:11:25 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-01-18 15:11:26 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-18 15:11:26 +0300
+
+
+Started PATCH "/items/18" for 127.0.0.1 at 2015-01-18 15:11:32 +0300
+Processing by ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6CaYYCWsjfWfb79cfxqzI5GDbOlN+OhKilYS5M9akflNMPlYKTr+yxm+eIxqTOVvfcA2BGq8nJjcbsAdIt4X1A==", "item"=>{"price"=>"10.0", "name"=>"", "description"=>"живая", "weight"=>"0.01"}, "commit"=>"Сохранить товар", "id"=>"18"}
+  [1m[35mItem Load (0.6ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1  [["id", 18]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  Rendered items/_form.html.erb (2.9ms)
+  Rendered items/edit.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 356ms (Views: 326.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-01-18 15:11:32 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-01-18 15:11:32 +0300
+
+
+Started GET "/assets/persons.css?body=1" for 127.0.0.1 at 2015-01-18 15:11:32 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-18 15:11:32 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-18 15:11:32 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-18 15:11:32 +0300
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-01-18 15:11:32 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-18 15:11:32 +0300
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-01-18 15:11:32 +0300
+
+
+Started GET "/assets/persons.js?body=1" for 127.0.0.1 at 2015-01-18 15:11:32 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-01-18 15:11:32 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-18 15:11:33 +0300
+
+
+Started GET "/items" for 127.0.0.1 at 2015-01-18 15:11:34 +0300
+Processing by ItemsController#index as HTML
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "items"[0m
+  [1m[35mItem Load (1.4ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application (49.4ms)
+Completed 200 OK in 377ms (Views: 371.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/persons.css?body=1" for 127.0.0.1 at 2015-01-18 15:11:35 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-01-18 15:11:35 +0300
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-01-18 15:11:35 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-18 15:11:35 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-18 15:11:35 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-18 15:11:35 +0300
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-01-18 15:11:35 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-18 15:11:35 +0300
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-01-18 15:11:35 +0300
+
+
+Started GET "/assets/persons.js?body=1" for 127.0.0.1 at 2015-01-18 15:11:35 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-18 15:11:35 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-01-18 15:11:35 +0300
+
+
+Started GET "/items/17" for 127.0.0.1 at 2015-01-18 15:12:20 +0300
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1[0m  [["id", 17]]
+  Rendered items/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 297ms (Views: 289.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2015-01-18 15:12:23 +0300
+Processing by ItemsController#index as HTML
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "items"
+  [1m[36mItem Load (1.8ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (39.1ms)
+Completed 200 OK in 364ms (Views: 358.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/items/17" for 127.0.0.1 at 2015-01-18 15:12:29 +0300
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mItem Load (0.4ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1  [["id", 17]]
+  Rendered items/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 304ms (Views: 298.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/items/17/edit" for 127.0.0.1 at 2015-01-18 15:12:40 +0300
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1[0m  [["id", 17]]
+  Rendered items/_form.html.erb (4.6ms)
+  Rendered items/edit.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 350ms (Views: 342.3ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/items/17" for 127.0.0.1 at 2015-01-18 15:13:05 +0300
+Processing by ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SGgNSSxAj2V2GGl7dixBiaYqj4SSZD5y5jX65UUaOUDtfmxxINb8W/DJrqtjehfFSmnVabUgSqCwDSgcqJ6/bQ==", "item"=>{"price"=>"2000.0", "name"=>"уровень", "description"=>"лазерный уровень    http://i00.i.aliimg.com/wsphoto/v0/1953275614_1/6-pcs-3-Line-3-Point-AK-455-360degree-Self-leveling-Cross-Laser-Level-Red-HOT.jpg      http://man.zz.vc      ", "weight"=>"0.29"}, "commit"=>"Сохранить товар", "id"=>"17"}
+  [1m[35mItem Load (0.4ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1  [["id", 17]]
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/items/17
+Completed 302 Found in 25ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/items/17" for 127.0.0.1 at 2015-01-18 15:13:05 +0300
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mItem Load (0.6ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1[0m  [["id", 17]]
+  Rendered items/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 319ms (Views: 310.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-01-18 15:13:05 +0300
+
+
+Started GET "/assets/persons.css?body=1" for 127.0.0.1 at 2015-01-18 15:13:06 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-01-18 15:13:06 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-18 15:13:06 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-18 15:13:06 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-18 15:13:06 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-18 15:13:06 +0300
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-01-18 15:13:06 +0300
+
+
+Started GET "/assets/persons.js?body=1" for 127.0.0.1 at 2015-01-18 15:13:06 +0300
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-01-18 15:13:06 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-01-18 15:13:06 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-18 15:13:06 +0300
+
+
+Started GET "/items/17" for 127.0.0.1 at 2015-01-18 15:14:56 +0300
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mItem Load (0.5ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1  [["id", 17]]
+  Rendered items/show.html.erb within layouts/application (9.8ms)
+Completed 500 Internal Server Error in 30ms
+
+SyntaxError (/home/rauf/sites/my_store/app/views/items/show.html.erb:7: syntax error, unexpected '<'
+		<b>Отсутствует.</b>
+		 ^
+/home/rauf/sites/my_store/app/views/items/show.html.erb:8: syntax error, unexpected '<'
+	<% else 
+	 ^):
+  app/views/items/show.html.erb:7: syntax error, unexpected '<'
+  app/views/items/show.html.erb:8: syntax error, unexpected '<'
+
+
+  Rendered /home/rauf/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (77.0ms)
+  Rendered /home/rauf/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (24.8ms)
+  Rendered /home/rauf/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (22.4ms)
+  Rendered /home/rauf/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (197.1ms)
+
+
+Started GET "/items/17" for 127.0.0.1 at 2015-01-18 15:17:18 +0300
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1[0m  [["id", 17]]
+  Rendered items/show.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 354ms (Views: 344.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-01-18 15:17:18 +0300
+
+
+Started GET "/assets/persons.css?body=1" for 127.0.0.1 at 2015-01-18 15:17:18 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-18 15:17:19 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-18 15:17:19 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-18 15:17:19 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-01-18 15:17:19 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-18 15:17:19 +0300
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-01-18 15:17:19 +0300
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-01-18 15:17:19 +0300
+
+
+Started GET "/assets/persons.js?body=1" for 127.0.0.1 at 2015-01-18 15:17:19 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-01-18 15:17:19 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-18 15:17:19 +0300
+
+
+Started GET "/items/17/edit" for 127.0.0.1 at 2015-01-18 15:17:27 +0300
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mItem Load (0.6ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1  [["id", 17]]
+  Rendered items/_form.html.erb (4.5ms)
+  Rendered items/edit.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 362ms (Views: 353.9ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/items/17" for 127.0.0.1 at 2015-01-18 15:17:32 +0300
+Processing by ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0UjBc6XVtKDezUOnOiy/N1G/+0hPojOCFvS2ohU66n90XqBLqUPHnlgchHcveul7vfyhpWjmR1BAzGRb+L5sUg==", "item"=>{"price"=>"2000.0", "name"=>"уровень", "description"=>"лазерный уровень    http://i00.i.aliimg.com/wsphoto/v0/1953275614_1/6-pcs-3-Line-3-Point-AK-455-360degree-Self-leveling-Cross-Laser-Level-Red-HOT.jpg      http://man.zz.vc      ", "weight"=>"0.29"}, "commit"=>"Сохранить товар", "id"=>"17"}
+  [1m[36mItem Load (0.6ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1[0m  [["id", 17]]
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/items/17
+Completed 302 Found in 33ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/items/17" for 127.0.0.1 at 2015-01-18 15:17:32 +0300
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mItem Load (0.4ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1  [["id", 17]]
+  Rendered items/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 351ms (Views: 345.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/persons.css?body=1" for 127.0.0.1 at 2015-01-18 15:17:32 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-18 15:17:32 +0300
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-01-18 15:17:32 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-01-18 15:17:32 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-18 15:17:32 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-18 15:17:32 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-18 15:17:33 +0300
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-01-18 15:17:33 +0300
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-01-18 15:17:33 +0300
+
+
+Started GET "/assets/persons.js?body=1" for 127.0.0.1 at 2015-01-18 15:17:33 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-01-18 15:17:33 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-18 15:17:33 +0300
+
+
+Started GET "/items/17/edit" for 127.0.0.1 at 2015-01-18 15:20:52 +0300
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mItem Load (0.6ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1[0m  [["id", 17]]
+  Rendered items/_form.html.erb (2.9ms)
+  Rendered items/edit.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 342ms (Views: 334.0ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/items/17" for 127.0.0.1 at 2015-01-18 15:20:55 +0300
+Processing by ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ecmrBUJbn8mFnkb5nLAK69+Wkxu3c4ZqBLVpbQ811v3c38o9Ts3s9wNPgSmJ5lynM9XJ9pA38rhSjbuU4rFQ0A==", "item"=>{"price"=>"2000.0", "name"=>"уровень", "description"=>"лазерный уровень    http://i00.i.aliimg.com/wsphoto/v0/1953275614_1/6-pcs-3-Line-3-Point-AK-455-360degree-Self-leveling-Cross-Laser-Level-Red-HOT.jpg      http://man.zz.vc      ", "weight"=>"0.29"}, "commit"=>"Сохранить товар", "id"=>"17"}
+  [1m[35mItem Load (0.6ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1  [["id", 17]]
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/items/17
+Completed 302 Found in 30ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/items/17" for 127.0.0.1 at 2015-01-18 15:20:55 +0300
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1[0m  [["id", 17]]
+  Rendered items/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 345ms (Views: 335.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-01-18 15:20:56 +0300
+
+
+Started GET "/assets/persons.css?body=1" for 127.0.0.1 at 2015-01-18 15:20:56 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-01-18 15:20:56 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-18 15:20:56 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-18 15:20:56 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-18 15:20:56 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-18 15:20:56 +0300
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-01-18 15:20:56 +0300
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-01-18 15:20:56 +0300
+
+
+Started GET "/assets/persons.js?body=1" for 127.0.0.1 at 2015-01-18 15:20:56 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-01-18 15:20:56 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-18 15:20:56 +0300
+
+
+Started GET "/items" for 127.0.0.1 at 2015-01-18 15:21:40 +0300
+Processing by ItemsController#index as HTML
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "items"
+  [1m[36mItem Load (2.2ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (51.6ms)
+Completed 200 OK in 463ms (Views: 456.0ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2015-01-18 15:21:45 +0300
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (3.4ms)
+  Rendered items/new.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 323ms (Views: 316.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2015-01-18 15:21:49 +0300
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i9wxJxxxpp4Sd40VRbOm+/f3u+xGRp7iQ3FWZ4Nu0QYuylAfEOfVoJSmSsVQ5fC3G7ThAWEC6jAVSYSebupXKw==", "item"=>{"price"=>"", "name"=>"", "description"=>"", "weight"=>""}, "commit"=>"Создать товар"}
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  Rendered items/_form.html.erb (4.7ms)
+  Rendered items/new.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 385ms (Views: 360.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-01-18 15:21:50 +0300
+
+
+Started GET "/assets/persons.css?body=1" for 127.0.0.1 at 2015-01-18 15:21:50 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-18 15:21:50 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-01-18 15:21:50 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-18 15:21:50 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-18 15:21:50 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-18 15:21:50 +0300
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-01-18 15:21:50 +0300
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-01-18 15:21:50 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-18 15:21:50 +0300
+
+
+Started GET "/assets/persons.js?body=1" for 127.0.0.1 at 2015-01-18 15:21:50 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-01-18 15:21:50 +0300
+
+
+Started GET "/items" for 127.0.0.1 at 2015-01-18 15:58:27 +0300
+Processing by ItemsController#index as HTML
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "items"
+  [1m[36mItem Load (1.2ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (81.9ms)
+Completed 200 OK in 476ms (Views: 438.5ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-01-18 15:58:28 +0300
+
+
+Started GET "/assets/persons.css?body=1" for 127.0.0.1 at 2015-01-18 15:58:28 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-18 15:58:28 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-18 15:58:28 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-01-18 15:58:28 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-18 15:58:28 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-18 15:58:28 +0300
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-01-18 15:58:28 +0300
+
+
+Started GET "/assets/persons.js?body=1" for 127.0.0.1 at 2015-01-18 15:58:28 +0300
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-01-18 15:58:28 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-01-18 15:58:28 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-18 15:58:28 +0300
+
+
+Started GET "/items/16" for 127.0.0.1 at 2015-01-18 15:58:36 +0300
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mItem Load (1.1ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1  [["id", 16]]
+  Rendered items/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 342ms (Views: 330.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/items/16/edit" for 127.0.0.1 at 2015-01-18 15:58:42 +0300
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1[0m  [["id", 16]]
+  Rendered items/_form.html.erb (7.0ms)
+  Rendered items/edit.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 321ms (Views: 315.2ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/items/16" for 127.0.0.1 at 2015-01-18 15:58:51 +0300
+Processing by ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OIOomDKQjRa2Ss23f50ta8bPeoPQta0kXa038Q6a7+2dlcmgPgb+KDCbCmdqy3snKowgbvfx2fYLleUI4x5pwA==", "item"=>{"price"=>"", "name"=>"", "description"=>"", "weight"=>""}, "commit"=>"Сохранить товар", "id"=>"16"}
+  [1m[35mItem Load (1.2ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1  [["id", 16]]
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  Rendered items/_form.html.erb (2.4ms)
+  Rendered items/edit.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 392ms (Views: 353.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/persons.css?body=1" for 127.0.0.1 at 2015-01-18 15:58:52 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-18 15:58:52 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-18 15:58:52 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-01-18 15:58:52 +0300
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-01-18 15:58:52 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-18 15:58:52 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-18 15:58:52 +0300
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-01-18 15:58:52 +0300
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-01-18 15:58:52 +0300
+
+
+Started GET "/assets/persons.js?body=1" for 127.0.0.1 at 2015-01-18 15:58:52 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-01-18 15:58:52 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-18 15:58:52 +0300
+
+
+Started PATCH "/items/16" for 127.0.0.1 at 2015-01-18 16:00:49 +0300
+Processing by ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dxgsW8sM4JOjHPXzX6Iblk1hqBo3wjZZ1k1JzNW0gUzSDk1jx5qTrSXNMiNK9E3aoSLy9xCGQouAdZs1ODAHYQ==", "item"=>{"price"=>"2000", "name"=>"sofa", "description"=>"диван угловой   https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR4kkzfwztrmj63aTq5D-cYHe1VcN6p8HdyOz9nwKfFfBL7KkqP5A   ", "weight"=>"150"}, "commit"=>"Сохранить товар", "id"=>"16"}
+  [1m[36mItem Load (1.0ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1[0m  [["id", 16]]
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (43.8ms)[0m  [1mUPDATE "items" SET "name" = ?, "description" = ?, "weight" = ?, "price" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["name", "sofa"], ["description", "диван угловой   https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR4kkzfwztrmj63aTq5D-cYHe1VcN6p8HdyOz9nwKfFfBL7KkqP5A   "], ["weight", 150.0], ["price", 2000.0], ["updated_at", "2015-01-18 13:00:49.821131"], ["id", 16]]
+  [1m[35m (350.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/items/16
+Completed 302 Found in 437ms (ActiveRecord: 395.1ms)
+
+
+Started GET "/items/16" for 127.0.0.1 at 2015-01-18 16:00:50 +0300
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1[0m  [["id", 16]]
+  Rendered items/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 363ms (Views: 355.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-01-18 16:00:50 +0300
+
+
+Started GET "/assets/persons.css?body=1" for 127.0.0.1 at 2015-01-18 16:00:50 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-01-18 16:00:51 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-18 16:00:51 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-18 16:00:51 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-18 16:00:51 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-18 16:00:51 +0300
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-01-18 16:00:51 +0300
+
+
+Started GET "/assets/persons.js?body=1" for 127.0.0.1 at 2015-01-18 16:00:51 +0300
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-01-18 16:00:51 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-18 16:00:51 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-01-18 16:00:51 +0300
+
+
+Started GET "/items/16" for 127.0.0.1 at 2015-01-18 16:01:21 +0300
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mItem Load (0.5ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1  [["id", 16]]
+  Rendered items/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 320ms (Views: 312.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-01-18 16:01:21 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-18 16:01:21 +0300
+
+
+Started GET "/assets/persons.css?body=1" for 127.0.0.1 at 2015-01-18 16:01:21 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-01-18 16:01:21 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-18 16:01:21 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-18 16:01:21 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-18 16:01:21 +0300
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-01-18 16:01:21 +0300
+
+
+Started GET "/assets/persons.js?body=1" for 127.0.0.1 at 2015-01-18 16:01:21 +0300
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-01-18 16:01:21 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-01-18 16:01:22 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-18 16:01:22 +0300
+
+
+Started GET "/items/16/edit" for 127.0.0.1 at 2015-01-18 16:01:36 +0300
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mItem Load (0.6ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1[0m  [["id", 16]]
+  Rendered items/_form.html.erb (5.0ms)
+  Rendered items/edit.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 318ms (Views: 308.6ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/items/16" for 127.0.0.1 at 2015-01-18 16:04:18 +0300
+Processing by ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wyCPX5zPxuNti65sptmMRbTmcdBvZDFxUo/6J6oBQStmNu5nkFm13etaabyzj9oJWKUrPUggRaMEtyjeR4XHBg==", "item"=>{"price"=>"2000.0", "name"=>"sofa", "description"=>"диван угловой   http://udobno59.ru/upload/image/%D0%A3%D0%B3%D0%BB%D0%BE%D0%B2%D0%BE%D0%B9%20%D0%B4%D0%B2%D0%B0%D0%BD_html_m1926ad57.png     ", "weight"=>"150.0"}, "commit"=>"Сохранить товар", "id"=>"16"}
+  [1m[35mItem Load (0.6ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1  [["id", 16]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  UPDATE "items" SET "description" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "диван угловой   http://udobno59.ru/upload/image/%D0%A3%D0%B3%D0%BB%D0%BE%D0%B2%D0%BE%D0%B9%20%D0%B4%D0%B2%D0%B0%D0%BD_html_m1926ad57.png     "], ["updated_at", "2015-01-18 13:04:18.137460"], ["id", 16]]
+  [1m[36m (168.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/items/16
+Completed 302 Found in 201ms (ActiveRecord: 171.2ms)
+
+
+Started GET "/items/16" for 127.0.0.1 at 2015-01-18 16:04:18 +0300
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mItem Load (0.4ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1  [["id", 16]]
+  Rendered items/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 365ms (Views: 358.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-01-18 16:04:19 +0300
+
+
+Started GET "/assets/persons.css?body=1" for 127.0.0.1 at 2015-01-18 16:04:19 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-01-18 16:04:19 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-18 16:04:19 +0300
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-01-18 16:04:19 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-18 16:04:19 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-18 16:04:19 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-18 16:04:19 +0300
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-01-18 16:04:19 +0300
+
+
+Started GET "/assets/persons.js?body=1" for 127.0.0.1 at 2015-01-18 16:04:19 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-18 16:04:19 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-01-18 16:04:19 +0300
+
+
+Started GET "/items/16" for 127.0.0.1 at 2015-01-18 16:05:47 +0300
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mItem Load (0.6ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1[0m  [["id", 16]]
+  Rendered items/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 338ms (Views: 332.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-18 16:05:47 +0300
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-01-18 16:05:47 +0300
+
+
+Started GET "/assets/persons.js?body=1" for 127.0.0.1 at 2015-01-18 16:05:48 +0300
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-01-18 16:05:48 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-01-18 16:05:48 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-18 16:05:48 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-18 16:05:48 +0300
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-01-18 16:05:48 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-01-18 16:05:48 +0300
+
+
+Started GET "/assets/persons.css?body=1" for 127.0.0.1 at 2015-01-18 16:05:48 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-18 16:05:48 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-18 16:05:48 +0300
+
+
+Started GET "/items/16/edit" for 127.0.0.1 at 2015-01-18 16:05:55 +0300
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mItem Load (0.5ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1  [["id", 16]]
+  Rendered items/_form.html.erb (4.2ms)
+  Rendered items/edit.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 313ms (Views: 306.3ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/items/16" for 127.0.0.1 at 2015-01-18 16:06:30 +0300
+Processing by ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L52OpllZqWq7Fe2lvVEQJTjm8+b3Cu2QhLw1JSONULmKi++eVc/aVD3EKnWoB0Zp1KWpC9BOmULShOfczgnWlA==", "item"=>{"price"=>"2000.0", "name"=>"sofa", "description"=>"диван угловой  http://udobno59.ru/upload/image/%D0%A3%D0%B3%D0%BB%D0%BE%D0%B2%D0%BE%D0%B9%20%D0%B4%D0%B2%D0%B0%D0%BD_html_m1926ad57.png     ", "weight"=>"150.0"}, "commit"=>"Сохранить товар", "id"=>"16"}
+  [1m[36mItem Load (1.1ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1[0m  [["id", 16]]
+  [1m[35m (0.6ms)[0m  begin transaction
+  [1m[36mSQL (1.5ms)[0m  [1mUPDATE "items" SET "description" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "диван угловой  http://udobno59.ru/upload/image/%D0%A3%D0%B3%D0%BB%D0%BE%D0%B2%D0%BE%D0%B9%20%D0%B4%D0%B2%D0%B0%D0%BD_html_m1926ad57.png     "], ["updated_at", "2015-01-18 13:06:30.171898"], ["id", 16]]
+  [1m[35m (177.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/items/16
+Completed 302 Found in 220ms (ActiveRecord: 181.1ms)
+
+
+Started GET "/items/16" for 127.0.0.1 at 2015-01-18 16:06:30 +0300
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1[0m  [["id", 16]]
+  Rendered items/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 330ms (Views: 322.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-01-18 16:06:31 +0300
+
+
+Started GET "/assets/persons.css?body=1" for 127.0.0.1 at 2015-01-18 16:06:31 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-18 16:06:31 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-01-18 16:06:31 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-18 16:06:31 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-18 16:06:31 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-18 16:06:31 +0300
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-01-18 16:06:31 +0300
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-01-18 16:06:31 +0300
+
+
+Started GET "/assets/persons.js?body=1" for 127.0.0.1 at 2015-01-18 16:06:31 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-01-18 16:06:31 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-18 16:06:31 +0300
+
+
+Started GET "/items/16/edit" for 127.0.0.1 at 2015-01-18 16:06:36 +0300
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mItem Load (0.4ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1  [["id", 16]]
+  Rendered items/_form.html.erb (6.4ms)
+  Rendered items/edit.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 322ms (Views: 315.5ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/items/16" for 127.0.0.1 at 2015-01-18 16:06:55 +0300
+Processing by ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QnN/9YF0faL7oK3HZC2kC2B6i5Z+5NETRCsMNvSAujfnZR7NjeIOnH1xahdxe/JHjDnRe1mgpcESE97PGQQ8Gg==", "item"=>{"price"=>"2000.0", "name"=>"sofa", "description"=>"диван угловой  http://udobno59.ru/upload/image/%D0%A3%D0%B3%D0%BB%D0%BE%D0%B2%D0%BE%D0%B9%20%D0%B4%D0%B2%D0%B0%D0%BD_html_m1926ad57.png  ", "weight"=>"150.0"}, "commit"=>"Сохранить товар", "id"=>"16"}
+  [1m[36mItem Load (0.6ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1[0m  [["id", 16]]
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (1.2ms)[0m  [1mUPDATE "items" SET "description" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "диван угловой  http://udobno59.ru/upload/image/%D0%A3%D0%B3%D0%BB%D0%BE%D0%B2%D0%BE%D0%B9%20%D0%B4%D0%B2%D0%B0%D0%BD_html_m1926ad57.png  "], ["updated_at", "2015-01-18 13:06:55.801400"], ["id", 16]]
+  [1m[35m (132.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/items/16
+Completed 302 Found in 174ms (ActiveRecord: 135.2ms)
+
+
+Started GET "/items/16" for 127.0.0.1 at 2015-01-18 16:06:55 +0300
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1[0m  [["id", 16]]
+  Rendered items/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 307ms (Views: 300.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/persons.css?body=1" for 127.0.0.1 at 2015-01-18 16:06:56 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-01-18 16:06:56 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-18 16:06:56 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-18 16:06:56 +0300
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-01-18 16:06:56 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-18 16:06:56 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-18 16:06:56 +0300
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-01-18 16:06:56 +0300
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-01-18 16:06:56 +0300
+
+
+Started GET "/assets/persons.js?body=1" for 127.0.0.1 at 2015-01-18 16:06:56 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-01-18 16:06:56 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-18 16:06:56 +0300
+
+
+Started GET "/items/16" for 127.0.0.1 at 2015-01-18 16:08:02 +0300
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mItem Load (0.6ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1  [["id", 16]]
+  Rendered items/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 341ms (Views: 333.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-01-18 16:08:02 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-01-18 16:08:03 +0300
+
+
+Started GET "/assets/persons.css?body=1" for 127.0.0.1 at 2015-01-18 16:08:03 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-18 16:08:03 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-18 16:08:03 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-18 16:08:03 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-18 16:08:03 +0300
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-01-18 16:08:03 +0300
+
+
+Started GET "/assets/persons.js?body=1" for 127.0.0.1 at 2015-01-18 16:08:03 +0300
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-01-18 16:08:03 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-01-18 16:08:03 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-18 16:08:03 +0300
+
+
+Started GET "/items/16/edit" for 127.0.0.1 at 2015-01-18 16:08:15 +0300
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1[0m  [["id", 16]]
+  Rendered items/_form.html.erb (2.3ms)
+  Rendered items/edit.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 333ms (Views: 325.8ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/items/16" for 127.0.0.1 at 2015-01-18 16:09:59 +0300
+Processing by ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/db5Q9Tl/UC7UpXJqGk55kX4kTfmQhd5d2+rUz0rQVxYwJh72HOOfj2DUhm9P2+qqbvL2sEGY6shV3mq0K/HcQ==", "item"=>{"price"=>"2000.0", "name"=>"sofa", "description"=>"диван угловой  http://www.divangorod.ru/images/orlando_b.png  ", "weight"=>"150.0"}, "commit"=>"Сохранить товар", "id"=>"16"}
+  [1m[35mItem Load (0.7ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1  [["id", 16]]
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "items" SET "description" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "диван угловой  http://www.divangorod.ru/images/orlando_b.png  "], ["updated_at", "2015-01-18 13:09:59.791837"], ["id", 16]]
+  [1m[36m (138.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/items/16
+Completed 302 Found in 182ms (ActiveRecord: 141.0ms)
+
+
+Started GET "/items/16" for 127.0.0.1 at 2015-01-18 16:10:00 +0300
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mItem Load (0.6ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1  [["id", 16]]
+  Rendered items/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 328ms (Views: 318.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-01-18 16:10:00 +0300
+
+
+Started GET "/assets/persons.css?body=1" for 127.0.0.1 at 2015-01-18 16:10:00 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-01-18 16:10:00 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-18 16:10:00 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-18 16:10:00 +0300
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-01-18 16:10:00 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-18 16:10:00 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-18 16:10:00 +0300
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-01-18 16:10:00 +0300
+
+
+Started GET "/assets/persons.js?body=1" for 127.0.0.1 at 2015-01-18 16:10:00 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-01-18 16:10:00 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-18 16:10:00 +0300
+
+
+Started GET "/items/16/edit" for 127.0.0.1 at 2015-01-18 16:10:07 +0300
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mItem Load (0.6ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1[0m  [["id", 16]]
+  Rendered items/_form.html.erb (4.0ms)
+  Rendered items/edit.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 317ms (Views: 308.3ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/items/16" for 127.0.0.1 at 2015-01-18 16:10:52 +0300
+Processing by ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xJzMtoI+N25t9d8X4spB8MDI0yUm+RdMXAlns4Ra3AZhiq2OjqhEUOskGMf3nBe8LIuJyAG9Y54KMbVKad5aKw==", "item"=>{"price"=>"2000.0", "name"=>"sofa", "description"=>"диван угловой  http://www.divangorod.ru/images/orlando_b.png    http://ma.zz.vc  ", "weight"=>"150.0"}, "commit"=>"Сохранить товар", "id"=>"16"}
+  [1m[35mItem Load (0.5ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1  [["id", 16]]
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  UPDATE "items" SET "description" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "диван угловой  http://www.divangorod.ru/images/orlando_b.png    http://ma.zz.vc  "], ["updated_at", "2015-01-18 13:10:52.477246"], ["id", 16]]
+  [1m[36m (169.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/items/16
+Completed 302 Found in 206ms (ActiveRecord: 171.4ms)
+
+
+Started GET "/items/16" for 127.0.0.1 at 2015-01-18 16:10:52 +0300
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mItem Load (0.5ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1  [["id", 16]]
+  Rendered items/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 338ms (Views: 331.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-01-18 16:10:53 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-18 16:10:53 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-01-18 16:10:53 +0300
+
+
+Started GET "/assets/persons.css?body=1" for 127.0.0.1 at 2015-01-18 16:10:53 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-18 16:10:53 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-18 16:10:53 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-18 16:10:53 +0300
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-01-18 16:10:53 +0300
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-01-18 16:10:53 +0300
+
+
+Started GET "/assets/persons.js?body=1" for 127.0.0.1 at 2015-01-18 16:10:53 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-01-18 16:10:53 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-18 16:10:53 +0300
+
+
+Started GET "/items/16/edit" for 127.0.0.1 at 2015-01-18 16:10:59 +0300
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1[0m  [["id", 16]]
+  Rendered items/_form.html.erb (3.2ms)
+  Rendered items/edit.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 346ms (Views: 339.2ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/items/16" for 127.0.0.1 at 2015-01-18 16:11:15 +0300
+Processing by ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5BLVYHRGvPB0wYULzfK4cH/DuHJtHwabPfLNrGMs0G9BBLRYeNDPzvIQQtvYpO48k4Din0pbcklryh9VjqhWQg==", "item"=>{"price"=>"2000.0", "name"=>"sofa", "description"=>"диван угловой  http://www.divangorod.ru/images/orlando_b.png    http://man.zz.vc  ", "weight"=>"150.0"}, "commit"=>"Сохранить товар", "id"=>"16"}
+  [1m[35mItem Load (0.6ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1  [["id", 16]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  UPDATE "items" SET "description" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "диван угловой  http://www.divangorod.ru/images/orlando_b.png    http://man.zz.vc  "], ["updated_at", "2015-01-18 13:11:15.295976"], ["id", 16]]
+  [1m[36m (153.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/items/16
+Completed 302 Found in 197ms (ActiveRecord: 155.2ms)
+
+
+Started GET "/items/16" for 127.0.0.1 at 2015-01-18 16:11:15 +0300
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mItem Load (3.2ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1  [["id", 16]]
+  Rendered items/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 349ms (Views: 338.7ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-01-18 16:11:16 +0300
+
+
+Started GET "/assets/persons.css?body=1" for 127.0.0.1 at 2015-01-18 16:11:16 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-18 16:11:16 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-01-18 16:11:16 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-18 16:11:16 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-18 16:11:16 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-18 16:11:16 +0300
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-01-18 16:11:16 +0300
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-01-18 16:11:16 +0300
+
+
+Started GET "/assets/persons.js?body=1" for 127.0.0.1 at 2015-01-18 16:11:16 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-01-18 16:11:16 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-18 16:11:16 +0300
+
+
+Started GET "/items" for 127.0.0.1 at 2015-01-18 16:11:21 +0300
+Processing by ItemsController#index as HTML
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "items"[0m
+  [1m[35mItem Load (1.5ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application (40.4ms)
+Completed 200 OK in 363ms (Views: 357.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/items/2" for 127.0.0.1 at 2015-01-18 16:11:23 +0300
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered items/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 319ms (Views: 312.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/items/2/edit" for 127.0.0.1 at 2015-01-18 16:11:31 +0300
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mItem Load (0.4ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered items/_form.html.erb (3.3ms)
+  Rendered items/edit.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 352ms (Views: 345.9ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/items/2" for 127.0.0.1 at 2015-01-18 16:11:38 +0300
+Processing by ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7PUhc/gD9fSlllH2LxtIy3ZRd1FJwWvmXNdbYbsJIvtJ40BL9JWGyiNHliY6TR6HmhItvG6FHzQK74mYVo2k1g==", "item"=>{"price"=>"2000.0", "name"=>"Телефон HONOR 1", "description"=>" Отличный телефон с 8MP камерой  http://reobzor.ru/wp-content/uploads/2012/02/huawei-honour-1.jpg    http://rusrails.ru     ", "weight"=>"0.2"}, "commit"=>"Сохранить товар", "id"=>"2"}
+  [1m[36mItem Load (1.4ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/items/2
+Completed 302 Found in 36ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/items/2" for 127.0.0.1 at 2015-01-18 16:11:38 +0300
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mItem Load (0.5ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered items/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 330ms (Views: 322.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/persons.css?body=1" for 127.0.0.1 at 2015-01-18 16:11:38 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-01-18 16:11:38 +0300
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-01-18 16:11:38 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-18 16:11:38 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-18 16:11:38 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-18 16:11:38 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-18 16:11:38 +0300
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-01-18 16:11:38 +0300
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-01-18 16:11:38 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-01-18 16:11:38 +0300
+
+
+Started GET "/assets/persons.js?body=1" for 127.0.0.1 at 2015-01-18 16:11:39 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-18 16:11:39 +0300
+
+
+Started GET "/items/2/edit" for 127.0.0.1 at 2015-01-18 16:11:48 +0300
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered items/_form.html.erb (2.5ms)
+  Rendered items/edit.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 328ms (Views: 318.4ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/items/2" for 127.0.0.1 at 2015-01-18 16:12:20 +0300
+Processing by ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mZzqTloicRUsKWHwg734ugtk2VRE91AAs95UUx92SU08iot2VrQCK6r4piCW66725yeDuWOzJNLl5oaq8vLPYA==", "item"=>{"price"=>"2000.0", "name"=>"Телефон HONOR 1", "description"=>" Отличный телефон с 8MP камерой  http://reobzor.ru/wp-content/uploads/2012/02/huawei-honour-1.jpg    http://rusrails.ru     ", "weight"=>"0.2"}, "commit"=>"Сохранить товар", "id"=>"2"}
+  [1m[35mItem Load (0.5ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/items/2
+Completed 302 Found in 21ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/items/2" for 127.0.0.1 at 2015-01-18 16:12:20 +0300
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mItem Load (0.6ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered items/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 330ms (Views: 322.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-01-18 16:12:21 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-01-18 16:12:21 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-18 16:12:21 +0300
+
+
+Started GET "/assets/persons.css?body=1" for 127.0.0.1 at 2015-01-18 16:12:21 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-18 16:12:21 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-18 16:12:21 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-18 16:12:21 +0300
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-01-18 16:12:21 +0300
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-01-18 16:12:21 +0300
+
+
+Started GET "/assets/persons.js?body=1" for 127.0.0.1 at 2015-01-18 16:12:21 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-01-18 16:12:21 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-18 16:12:21 +0300
+
+
+Started GET "/items" for 127.0.0.1 at 2015-01-18 16:12:37 +0300
+Processing by ItemsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "items"
+  [1m[36mItem Load (1.6ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (39.7ms)
+Completed 200 OK in 401ms (Views: 396.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/items/19" for 127.0.0.1 at 2015-01-18 16:12:51 +0300
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mItem Load (0.8ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1  [["id", 19]]
+  Rendered items/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 317ms (Views: 306.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/items/19/edit" for 127.0.0.1 at 2015-01-18 16:12:54 +0300
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mItem Load (0.7ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1[0m  [["id", 19]]
+  Rendered items/_form.html.erb (2.4ms)
+  Rendered items/edit.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 317ms (Views: 308.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2015-01-18 16:13:03 +0300
+Processing by ItemsController#index as HTML
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "items"
+  [1m[36mItem Load (2.9ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (38.3ms)
+Completed 200 OK in 386ms (Views: 380.1ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/items/16" for 127.0.0.1 at 2015-01-18 16:13:06 +0300
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mItem Load (0.4ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1  [["id", 16]]
+  Rendered items/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 327ms (Views: 320.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/items/16/edit" for 127.0.0.1 at 2015-01-18 16:13:10 +0300
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1[0m  [["id", 16]]
+  Rendered items/_form.html.erb (3.9ms)
+  Rendered items/edit.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 350ms (Views: 341.0ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/items/16" for 127.0.0.1 at 2015-01-18 16:13:25 +0300
+Processing by ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nEgL2XzD+wur+49Ehz4ax9oaOEDznFnzdOl/gvyZPrY5XmrhcFWINS0qSJSSaEyLNllirdTYLSEi0a17ER24mw==", "item"=>{"price"=>"2000.0", "name"=>"sofa", "description"=>"диван угловой  http://reobzor.ru/wp-content/uploads/2012/02/huawei-honour-1.jpg     http://man.zz.vc  ", "weight"=>"150.0"}, "commit"=>"Сохранить товар", "id"=>"16"}
+  [1m[35mItem Load (0.4ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1  [["id", 16]]
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  UPDATE "items" SET "description" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "диван угловой  http://reobzor.ru/wp-content/uploads/2012/02/huawei-honour-1.jpg     http://man.zz.vc  "], ["updated_at", "2015-01-18 13:13:25.249926"], ["id", 16]]
+  [1m[36m (237.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/items/16
+Completed 302 Found in 265ms (ActiveRecord: 239.2ms)
+
+
+Started GET "/items/16" for 127.0.0.1 at 2015-01-18 16:13:25 +0300
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mItem Load (0.5ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1  [["id", 16]]
+  Rendered items/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 299ms (Views: 291.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-01-18 16:13:26 +0300
+
+
+Started GET "/assets/persons.css?body=1" for 127.0.0.1 at 2015-01-18 16:13:26 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-01-18 16:13:26 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-18 16:13:26 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-18 16:13:26 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-18 16:13:26 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-18 16:13:26 +0300
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-01-18 16:13:26 +0300
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-01-18 16:13:26 +0300
+
+
+Started GET "/assets/persons.js?body=1" for 127.0.0.1 at 2015-01-18 16:13:26 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-01-18 16:13:26 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-18 16:13:26 +0300
+
+
+Started GET "/items" for 127.0.0.1 at 2015-01-18 16:14:25 +0300
+Processing by ItemsController#index as HTML
+  [1m[36m (0.9ms)[0m  [1mSELECT COUNT(*) FROM "items"[0m
+  [1m[35mItem Load (1.7ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application (35.0ms)
+Completed 200 OK in 365ms (Views: 357.5ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-18 16:14:27 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 320ms (Views: 317.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2015-01-18 16:14:29 +0300
+Processing by ItemsController#index as HTML
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "items"[0m
+  [1m[35mItem Load (1.4ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 423ms (Views: 415.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/items/2" for 127.0.0.1 at 2015-01-18 16:34:42 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mItem Load (1.4ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered items/show.html.haml within layouts/application (18.4ms)
+Completed 500 Internal Server Error in 252ms
+
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %h1 and nested within it.):
+    1: %h1= @item.name
+    2: 
+    3: 	%ul
+    4: 		%li цена:=  @item.price %руб.
+    5: 		%li описание:= urls_to_links(urls_to_images(@item.description))
+    6: 		%li Вес:= @item.weight %кг.
+  app/views/items/show.html.haml:3
+
+
+  Rendered /home/rauf/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (70.0ms)
+  Rendered /home/rauf/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (30.0ms)
+  Rendered /home/rauf/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.3ms)
+  Rendered /home/rauf/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (209.9ms)
+
+
+Started GET "/items/2" for 127.0.0.1 at 2015-01-18 16:42:46 +0300
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered items/show.html.haml within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 19ms
+
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %h1 and nested within it.):
+    1: %h1= @item.name
+    2: 
+    3: 	%ul
+    4: 		%li цена:=  '#{@item.price} %руб.'
+    5: 		%li описание:= urls_to_links(urls_to_images(@item.description))
+    6: 		%li Вес: #{@item.weight} кг.
+  app/views/items/show.html.haml:3
+
+
+  Rendered /home/rauf/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (70.0ms)
+  Rendered /home/rauf/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (30.1ms)
+  Rendered /home/rauf/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.7ms)
+  Rendered /home/rauf/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (184.8ms)
+
+
+Started GET "/items/2" for 127.0.0.1 at 2015-01-18 16:42:58 +0300
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mItem Load (0.5ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered items/show.html.haml within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 19ms
+
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %h1 and nested within it.):
+    1: %h1= @item.name
+    2: 
+    3: 	%ul
+    4: 		%li цена:=  '#{@item.price} %руб.'
+    5: 		%li описание:= urls_to_links(urls_to_images(@item.description))
+    6: 		%li Вес: #{@item.weight} кг.
+  app/views/items/show.html.haml:3
+
+
+  Rendered /home/rauf/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (64.7ms)
+  Rendered /home/rauf/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (26.0ms)
+  Rendered /home/rauf/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.6ms)
+  Rendered /home/rauf/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (200.4ms)
+
+
+Started GET "/items/2" for 127.0.0.1 at 2015-01-18 16:43:00 +0300
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered items/show.html.haml within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 19ms
+
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %h1 and nested within it.):
+    1: %h1= @item.name
+    2: 
+    3: 	%ul
+    4: 		%li цена:=  '#{@item.price} %руб.'
+    5: 		%li описание:= urls_to_links(urls_to_images(@item.description))
+    6: 		%li Вес: #{@item.weight} кг.
+  app/views/items/show.html.haml:3
+
+
+  Rendered /home/rauf/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (76.6ms)
+  Rendered /home/rauf/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (29.8ms)
+  Rendered /home/rauf/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.5ms)
+  Rendered /home/rauf/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (201.2ms)
+
+
+Started GET "/items/2" for 127.0.0.1 at 2015-01-18 16:43:51 +0300
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mItem Load (0.6ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered items/show.html.haml within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 23ms
+
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %h1 and nested within it.):
+    1: %h1= @item.name
+    2: 	%ul
+    3: 		%li цена:=  '#{@item.price} %руб.'
+    4: 		%li описание:= urls_to_links(urls_to_images(@item.description))
+    5: 		%li Вес: #{@item.weight} кг.
+  app/views/items/show.html.haml:2
+
+
+  Rendered /home/rauf/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (63.3ms)
+  Rendered /home/rauf/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (25.4ms)
+  Rendered /home/rauf/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.9ms)
+  Rendered /home/rauf/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (179.6ms)
+
+
+Started GET "/items/2" for 127.0.0.1 at 2015-01-18 16:45:06 +0300
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered items/show.html.haml within layouts/application (14.1ms)
+Completed 200 OK in 823ms (Views: 812.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-01-18 16:45:07 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-18 16:45:07 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-18 16:45:07 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-18 16:45:07 +0300
+
+
+Started GET "/assets/persons.css?body=1" for 127.0.0.1 at 2015-01-18 16:45:07 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-01-18 16:45:07 +0300
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-01-18 16:45:07 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-18 16:45:07 +0300
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-01-18 16:45:07 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-01-18 16:45:07 +0300
+
+
+Started GET "/assets/persons.js?body=1" for 127.0.0.1 at 2015-01-18 16:45:08 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-18 16:45:08 +0300
+
+
+Started GET "/items/2" for 127.0.0.1 at 2015-01-18 16:47:11 +0300
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mItem Load (0.6ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered items/show.html.haml within layouts/application (16.0ms)
+Completed 200 OK in 359ms (Views: 351.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-01-18 16:47:12 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-18 16:47:12 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-01-18 16:47:12 +0300
+
+
+Started GET "/assets/persons.css?body=1" for 127.0.0.1 at 2015-01-18 16:47:12 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-18 16:47:12 +0300
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-01-18 16:47:12 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-18 16:47:12 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-18 16:47:12 +0300
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-01-18 16:47:12 +0300
+
+
+Started GET "/assets/persons.js?body=1" for 127.0.0.1 at 2015-01-18 16:47:12 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-01-18 16:47:12 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-18 16:47:12 +0300
+
+
+Started GET "/items/2/edit" for 127.0.0.1 at 2015-01-18 16:47:33 +0300
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mItem Load (0.7ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered items/_form.html.erb (47.5ms)
+  Rendered items/edit.html.erb within layouts/application (89.2ms)
+Completed 200 OK in 414ms (Views: 405.2ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/items/2" for 127.0.0.1 at 2015-01-18 16:48:55 +0300
+Processing by ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0g31/fldSfr+JpnLaYXFppMMMHOE8Setcx9ex6J7iQ13G5TF9cs6xHj3Xht805Pqf09qnqO1U38lJ4w+T/8PIA==", "item"=>{"price"=>"2000.0", "name"=>"Телефон HONOR 1", "description"=>" Отличный телефон с 8MP камерой  http://reobzor.ru/wp-content/uploads/2012/02/huawei-honour-1.jpg    http://rusrails.ru     ", "weight"=>"0.2"}, "commit"=>"Сохранить товар", "id"=>"2"}
+  [1m[35mItem Load (0.9ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/items/2
+Completed 302 Found in 24ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/items/2" for 127.0.0.1 at 2015-01-18 16:48:55 +0300
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered items/show.html.haml within layouts/application (9.3ms)
+Completed 200 OK in 371ms (Views: 362.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-01-18 16:48:56 +0300
+
+
+Started GET "/assets/persons.css?body=1" for 127.0.0.1 at 2015-01-18 16:48:56 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-18 16:48:56 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-18 16:48:56 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-18 16:48:56 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-01-18 16:48:56 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-18 16:48:56 +0300
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-01-18 16:48:56 +0300
+
+
+Started GET "/assets/persons.js?body=1" for 127.0.0.1 at 2015-01-18 16:48:56 +0300
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-01-18 16:48:56 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-01-18 16:48:56 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-18 16:48:56 +0300
+
+
+Started GET "/items/2/edit" for 127.0.0.1 at 2015-01-18 16:49:07 +0300
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mItem Load (0.8ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered items/_form.html.erb (2.6ms)
+  Rendered items/edit.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 331ms (Views: 320.3ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/items/2" for 127.0.0.1 at 2015-01-18 16:49:39 +0300
+Processing by ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DmmevFvxrGBseAZZ3i7Xv3F5icPwc1gGxASY1ROdQmerf/+EV2ffXuqpwYnLeIHznTrTLtc3LNSSPEos/hnESg==", "item"=>{"price"=>"2000.0", "name"=>"Телефон HONOR 1", "description"=>" Отличный телефон с 8MP камерой  http://reobzor.ru/wp-content/uploads/2012/02/huawei-honour-1.jpg    http://rusrails.ru     ", "weight"=>"0.2"}, "commit"=>"Сохранить товар", "id"=>"2"}
+  [1m[36mItem Load (1.1ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/items/2
+Completed 302 Found in 30ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/items/2" for 127.0.0.1 at 2015-01-18 16:49:39 +0300
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mItem Load (0.5ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered items/show.html.haml within layouts/application (11.8ms)
+Completed 200 OK in 377ms (Views: 369.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-01-18 16:49:40 +0300
+
+
+Started GET "/assets/persons.css?body=1" for 127.0.0.1 at 2015-01-18 16:49:40 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-18 16:49:40 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-18 16:49:40 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-18 16:49:40 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-01-18 16:49:40 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-18 16:49:40 +0300
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-01-18 16:49:40 +0300
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-01-18 16:49:40 +0300
+
+
+Started GET "/assets/persons.js?body=1" for 127.0.0.1 at 2015-01-18 16:49:40 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-01-18 16:49:40 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-18 16:49:40 +0300
+
+
+Started GET "/items/2/edit" for 127.0.0.1 at 2015-01-18 16:49:46 +0300
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mItem Load (0.7ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered items/_form.html.erb (3.8ms)
+  Rendered items/edit.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 380ms (Views: 369.9ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/items/2" for 127.0.0.1 at 2015-01-18 16:49:50 +0300
+Processing by ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m9pwF/knNfAaI8erxIR/DyC3SypwrNT6/fJdpsjOMcY+zBEv9bFGzpzyAHvR0ilDzPQRx1fooCiryo9fJUq36w==", "item"=>{"price"=>"2000.0", "name"=>"Телефон HONOR 1", "description"=>" Отличный телефон с 8MP камерой  http://reobzor.ru/wp-content/uploads/2012/02/huawei-honour-1.jpg    http://rusrails.ru     ", "weight"=>"0.2"}, "commit"=>"Сохранить товар", "id"=>"2"}
+  [1m[35mItem Load (0.4ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/items/2
+Completed 302 Found in 33ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/items/2" for 127.0.0.1 at 2015-01-18 16:49:50 +0300
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered items/show.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 329ms (Views: 320.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-01-18 16:49:50 +0300
+
+
+Started GET "/assets/persons.css?body=1" for 127.0.0.1 at 2015-01-18 16:49:50 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-01-18 16:49:51 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-18 16:49:51 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-18 16:49:51 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-18 16:49:51 +0300
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-01-18 16:49:51 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-18 16:49:51 +0300
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-01-18 16:49:51 +0300
+
+
+Started GET "/assets/persons.js?body=1" for 127.0.0.1 at 2015-01-18 16:49:51 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-01-18 16:49:51 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-18 16:49:51 +0300
+
+
+Started GET "/items/2" for 127.0.0.1 at 2015-01-18 16:51:23 +0300
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mItem Load (0.7ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered items/show.html.haml within layouts/application (19.6ms)
+Completed 200 OK in 382ms (Views: 373.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-01-18 16:51:24 +0300
+
+
+Started GET "/assets/persons.css?body=1" for 127.0.0.1 at 2015-01-18 16:51:24 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-01-18 16:51:24 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-18 16:51:24 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-18 16:51:24 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-18 16:51:24 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-18 16:51:24 +0300
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-01-18 16:51:24 +0300
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-01-18 16:51:24 +0300
+
+
+Started GET "/assets/persons.js?body=1" for 127.0.0.1 at 2015-01-18 16:51:24 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-01-18 16:51:24 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-18 16:51:24 +0300
+
+
+Started GET "/items/2" for 127.0.0.1 at 2015-01-18 16:52:10 +0300
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = ?  ORDER BY "items"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered items/show.html.haml within layouts/application (15.9ms)
+Completed 200 OK in 378ms (Views: 370.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2015-01-18 16:52:10 +0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-01-18 16:52:10 +0300
+
+
+Started GET "/assets/persons.css?body=1" for 127.0.0.1 at 2015-01-18 16:52:10 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-18 16:52:10 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-18 16:52:10 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-18 16:52:10 +0300
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-01-18 16:52:10 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-18 16:52:10 +0300
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2015-01-18 16:52:10 +0300
+
+
+Started GET "/assets/persons.js?body=1" for 127.0.0.1 at 2015-01-18 16:52:10 +0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-01-18 16:52:10 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-18 16:52:10 +0300

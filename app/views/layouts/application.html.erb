@@ -10,6 +10,9 @@
 <p><%= link_to "Главная", root_path %>
 &mdash;
 <%= link_to "Товары", items_path %></p>
+
+<p style="color:red"><%= flash[:error]%></p>
+<p style="color:green"><%= flash[:success]%></p>
 <%= yield %>
 
 </body>

@@ -53,22 +53,22 @@ class ItemsController < ApplicationController
 	# /items/1 PUT
 	def update
 
-		
-
 		item_params = params.require(:item).permit(:name, :description, :weight, :price, :real, :item_id, :cart_id, :quantity, :comentable_id, :body, :user_id)
 
 		@item.update_attributes(item_params)
 
 		if @item.errors.empty?
+			flash[:success] = "Товар успешно обновлён."
 			redirect_to item_path(@item)
 		else
+			flash.now[:error] = "Не верно заполнены поля! Надо исправить."
 			render "edit"
 		end
 	end
 
 	# /item/1 DELETE
 	def destroy
-	
+	 
 	@item.destroy
 	redirect_to action: "index"	
 	end
