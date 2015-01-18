@@ -37,7 +37,7 @@ class ItemsController < ApplicationController
 
 	# /items/ POST
 	def create
-		item_params = params.require(:item).permit(:name, :description, :weight, :price, :real, :item_id, :cart_id, :quantity, :comentable_id, :body, :user_id)
+		#item_params = params.require(:item).permit(:name, :description, :weight, :price, :real, :item_id, :cart_id, :quantity, :comentable_id, :body, :user_id)
 @item = Item.create(item_params) 
 
 		if @item.errors.empty?
@@ -53,7 +53,7 @@ class ItemsController < ApplicationController
 	# /items/1 PUT
 	def update
 
-		item_params = params.require(:item).permit(:name, :description, :weight, :price, :real, :item_id, :cart_id, :quantity, :comentable_id, :body, :user_id)
+		#item_params = params.require(:item).permit(:name, :description, :weight, :price, :real, :item_id, :cart_id, :quantity, :comentable_id, :body, :user_id)
 
 		@item.update_attributes(item_params)
 
@@ -84,6 +84,11 @@ class ItemsController < ApplicationController
 	@item = Item.where(id:params[:id]).first
 	render_404 unless @item	
 	end	
+
+	def item_params
+		params.require(:item).permit(:name, :description, :weight, :price, :real, :item_id, :cart_id, :quantity, :comentable_id, :body, :user_id)
+
+	end
 
 end
 

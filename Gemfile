@@ -7,6 +7,7 @@ gem 'rails'
 gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails'
+gem 'bootstrap-sass'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier'
 # Use CoffeeScript for .js.coffee assets and views
@@ -26,6 +27,7 @@ gem 'jbuilder'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'haml-rails'
+gem 'simple_form'
 # Use unicorn as the app server
 # gem 'unicorn'
 
